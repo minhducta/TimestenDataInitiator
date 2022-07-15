@@ -1,0 +1,21 @@
+# Spring Boot configuration
+spring:
+  datasource:
+    #dev
+#    url: jdbc:timesten:client:TTC_SERVER=10.9.2.43;TTC_SERVER_DSN=FOHFT;TCP_PORT=53387;
+#    username: FOHFT
+#    password: FOHFT
+    #mrx
+    url: jdbc:timesten:client:TTC_SERVER=10.82.66.58;TTC_SERVER_DSN=FOMX;TCP_PORT=53397;
+    username: FOMX
+    password: FOMX
+    driverClassName: com.timesten.jdbc.TimesTenDriver
+    hikari:
+      maximum-pool-size: 4
+      auto-commit: false
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.TimesTenDialect
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true

@@ -1,0 +1,5 @@
+firewall-cmd --permanent --add-port=55511/tcp
+firewall-cmd --permanent --add-port=55522/tcp
+firewall-cmd --permanent --add-port=55600/tcp
+systemctl restart firewalld
+firewall-cmd --list-ports
